@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdVenture | India's Premier Influencer Marketing Platform</title>
+    <meta name="description" content="Connect with top Indian influencers across YouTube, Instagram and TikTok for your brand campaigns">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awe some/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Auth Bar --> 
+    <div class="auth-bar">
+        <div class="container">
+            <div class="auth-links">
+                <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="register-btn"><i class="fas fa-user-plus"></i> Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/adventure-logo.png" class="logo-img">
+                <span>AdVenture</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#featured"><i class="fas fa-star"></i> Featured</a>
+                <a href="pricing.html"><i class="fas fa-tag"></i> Pricing</a>
+                <a href="#testimonials"><i class="fas fa-quote-left"></i> Testimonials</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Boost Your Brand with India's Top Influencers</h1>
+                <p>Access 5000+ verified influencers across Instagram, YouTube and TikTok with transparent pricing in INR</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search influencers (e.g. Fashion, Mumbai, 1M followers)" id="searchInput">
+                        <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                    <div class="search-filters">
+                        <select id="platformFilter">
+                            <option value="all">All Platforms</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="tiktok">TikTok</option>
+                        </select>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="beauty">Beauty</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="gaming">Gaming</option>
+                        </select>
+                        <select id="locationFilter">
+                            <option value="all">All India</option>
+                            <option value="delhi">Delhi NCR</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="hyderabad">Hyderabad</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Stats -->
+    <section class="platform-stats">
+        <div class="container">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fab fa-instagram"></i></div>
+                <div class="stat-value">260+</div>
+                <div class="stat-label">Instagram Influencers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fab fa-youtube"></i></div>
+                <div class="stat-value">100+</div>
+                <div class="stat-label">YouTube Creators</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fab fa-tiktok"></i></div>
+                <div class="stat-value">120+</div>
+                <div class="stat-label">TikTok Stars</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Influencers -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Indian Influencers This Month</h2>
+                <div class="sort-options">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="popular">Most Popular</option>
+                        <option value="engagement">Highest Engagement</option>
+                        <option value="followers">Most Followers</option>
+                        <option value="price">Price (Low to High)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="influencer-grid" id="influencerGrid">
+                <!-- Populated by JavaScript -->
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading influencers...</p>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button id="loadMoreBtn" class="btn-secondary">Load More Influencers</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing CTA -->
+    <section class="pricing-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Transparent Pricing in INR</h2>
+                <p>See exactly how much campaigns cost with our influencer rate cards</p>
+                <a href="pricing.html" class="btn-primary">View Pricing Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2>Trusted by 500+ Indian Brands</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"AdVenture helped us connect with perfect micro-influencers in Mumbai. Our campaign ROI increased by 300%!"</p>
+                    <div class="client-info">
+                        <img src="assets/testimonials/priya-sharma.jpg" alt="Priya Sharma">
+                        <div>
+                            <div class="name">Priya Sharma</div>
+                            <div class="title">Marketing Head, DesiDukaan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"The platform saved us weeks of influencer research. We found 20 perfect matches for our skincare brand."</p>
+                    <div class="client-info">
+                        <img src="assets/testimonials/rahul-kapoor.jpg" alt="Rahul Kapoor">
+                        <div>
+                            <div class="name">Rahul Kapoor</div>
+                            <div class="title">Founder, GlowHerb</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Ready to Start Your Campaign?</h2>
+                    <p>Our influencer specialists are available to help you plan your strategy</p>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@adventure.in</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mumbai | Delhi | Bangalore</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your campaign"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Get Expert Advice</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/logos/adventure-logo-white.png" alt="AdVenture Logo" class="footer-logo">
+                    <p>India's most trusted influencer marketing platform since 2020</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#featured">Influencers</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Influencer Agreement</a></li>
+                        <li><a href="#">Brand Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AdVenture Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+</body>
+</html> 

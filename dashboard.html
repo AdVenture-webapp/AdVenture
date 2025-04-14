@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Adventure-specific styles */
+        :root {
+            --adventure-primary: #5C4B37;
+            --adventure-secondary: #8B4513;
+            --adventure-accent: #D4A76A;
+        }
+        
+        body {
+            background: url('https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Cinzel', serif;
+        }
+        
+        .dashboard-container {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            border: 2px solid var(--adventure-accent);
+            border-radius: 15px;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+        }
+        
+        .hero-header {
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--adventure-accent);
+        }
+        
+        .hero-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--adventure-accent);
+            object-fit: cover;
+            background: #5C4B37;
+        }
+        
+        .quest-card {
+            background: linear-gradient(135deg, rgba(92, 75, 55, 0.8) 0%, rgba(43, 34, 24, 0.9) 100%);
+            border-left: 5px solid var(--adventure-accent);
+            transition: transform 0.3s;
+        }
+        
+        .quest-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background: #3E2D21;
+            border-radius: 5px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #D4A76A, #F1C27D);
+            border-radius: 5px;
+            width: 45%;
+        }
+        
+        .inventory-item {
+            background: rgba(139, 69, 19, 0.3);
+            border: 1px solid var(--adventure-accent);
+        }
+        
+        .logout-btn {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            letter-spacing: 1px;
+        }
+        
+        .logout-btn:hover {
+            background: linear-gradient(135deg, #A0522D, #8B4513);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container dashboard-container">
+        <!-- Hero Profile Section -->
+        <div class="hero-header text-center mb-5">
+            <img src="https://i.imgur.com/JQWpgIm.png" alt="Hero Avatar" class="hero-avatar mb-3">
+            <h1 id="hero-name">Adventurer</h1>
+            <p class="text-muted">Level <span id="hero-level">5</span> Explorer</p>
+        </div>
+        
+        <div class="row">
+            <!-- Current Quest -->
+            <div class="col-md-6 mb-4">
+                <div class="quest-card p-4 rounded">
+                    <h3><i class="fas fa-scroll mr-2"></i> Current Quest</h3>
+                    <h4 id="quest-title">The Lost Temple of Zorath</h4>
+                    <p id="quest-desc">Retrieve the Sacred Gem from the ancient ruins before the next full moon.</p>
+                    
+                    <div class="mt-3">
+                        <p>Progress: <span id="quest-progress">45</span>%</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-bar-fill"></div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-block mt-3" style="background: var(--adventure-accent);">Continue Quest</button>
+                </div>
+            </div>
+            
+            <!-- Inventory -->
+            <div class="col-md-6 mb-4">
+                <h3><i class="fas fa-backpack mr-2"></i> Inventory</h3>
+                <div class="row">
+                    <div class="col-4 mb-3">
+                        <div class="inventory-item p-2 rounded text-center">
+                            <i class="fas fa-gem fa-2x mb-2" style="color: #D4A76A;"></i>
+                            <p>Sacred Gem</p>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <div class="inventory-item p-2 rounded text-center">
+                            <i class="fas fa-key fa-2x mb-2" style="color: silver;"></i>
+                            <p>Ancient Key</p>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <div class="inventory-item p-2 rounded text-center">
+                            <i class="fas fa-hat-wizard fa-2x mb-2" style="color: #6A5ACD;"></i>
+                            <p>Mage's Hat</p>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <div class="inventory-item p-2 rounded text-center">
+                            <i class="fas fa-flask fa-2x mb-2" style="color: #32CD32;"></i>
+                            <p>Healing Potion</p>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <div class="inventory-item p-2 rounded text-center">
+                            <i class="fas fa-book fa-2x mb-2" style="color: #8B0000;"></i>
+                            <p>Spellbook</p>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <div class="inventory-item p-2 rounded text-center">
+                            <i class="fas fa-plus-circle fa-2x mb-2" style="color: #D4A76A;"></i>
+                            <p>More...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats -->
+        <div class="row mb-4">
+            <div class="col-md-3 col-6 text-center">
+                <h4>Health</h4>
+                <div class="circular-progress" data-value="75">
+                    <svg class="progress-ring" width="80" height="80">
+                        <circle class="progress-ring-circle" stroke="#FF0000" stroke-width="6" fill="transparent" r="35" cx="40" cy="40"/>
+                    </svg>
+                    <span class="progress-text">75%</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 text-center">
+                <h4>Mana</h4>
+                <div class="circular-progress" data-value="40">
+                    <svg class="progress-ring" width="80" height="80">
+                        <circle class="progress-ring-circle" stroke="#1E90FF" stroke-width="6" fill="transparent" r="35" cx="40" cy="40"/>
+                    </svg>
+                    <span class="progress-text">40%</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 text-center">
+                <h4>Strength</h4>
+                <div class="circular-progress" data-value="85">
+                    <svg class="progress-ring" width="80" height="80">
+                        <circle class="progress-ring-circle" stroke="#FF8C00" stroke-width="6" fill="transparent" r="35" cx="40" cy="40"/>
+                    </svg>
+                    <span class="progress-text">85%</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 text-center">
+                <h4>Agility</h4>
+                <div class="circular-progress" data-value="60">
+                    <svg class="progress-ring" width="80" height="80">
+                        <circle class="progress-ring-circle" stroke="#32CD32" stroke-width="6" fill="transparent" r="35" cx="40" cy="40"/>
+                    </svg>
+                    <span class="progress-text">60%</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map -->
+        <div class="mb-4">
+            <h3><i class="fas fa-map-marked-alt mr-2"></i> World Map</h3>
+            <div style="background: url('https://i.imgur.com/7QF4WfG.png') no-repeat center center; background-size: cover; height: 200px; border: 3px solid var(--adventure-accent); border-radius: 10px; position: relative;">
+                <div class="player-marker" style="position: absolute; top: 65%; left: 30%;">
+                    <i class="fas fa-map-marker-alt fa-2x" style="color: red;"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Logout Button -->
+        <button class="btn logout-btn btn-block py-3 mt-4" id="logoutBtn">
+            <i class="fas fa-sign-out-alt mr-2"></i> Leave Adventure
+        </button>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Dashboard Script -->
+    <script>
+        // Check if user is logged in
+        if(!localStorage.getItem('mockAuth')) {
+            window.location.href = 'login.html';
+        }
+        
+        // Load user data
+        document.getElementById('hero-name').textContent = localStorage.getItem('mockUser') || 'Adventurer';
+        
+        // Animate progress bars
+        document.querySelectorAll('.circular-progress').forEach(el => {
+            const progress = el.getAttribute('data-value');
+            const circle = el.querySelector('.progress-ring-circle');
+            const radius = circle.r.baseVal.value;
+            const circumference = 2 * Math.PI * radius;
+            
+            circle.style.strokeDasharray = `${circumference}`;
+            circle.style.strokeDashoffset = `${circumference - (progress / 100 * circumference)}`;
+        });
+        
+        // Logout function
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('mockAuth');
+            window.location.href = 'login.html';
+        });
+        
+        // Update quest progress animation
+        let progress = 0;
+        const questProgress = setInterval(() => {
+            progress += 1;
+            document.getElementById('quest-progress').textContent = progress;
+            document.getElementById('progress-bar-fill').style.width = `${progress}%`;
+            
+            if(progress >= 45) {
+                clearInterval(questProgress);
+            }
+        }, 50);
+    </script>
+</body>
+</html>

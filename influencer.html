@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer Profile | AdVenture</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Auth Bar -->
+    <div class="auth-bar">
+        <div class="container">
+            <div class="auth-links">
+                <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="register-btn"><i class="fas fa-user-plus"></i> Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/adventure-logo.png" alt="AdVenture Logo" class="logo-img">
+                <span>AdVenture</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="index.html#featured"><i class="fas fa-star"></i> Featured</a>
+                <a href="pricing.html"><i class="fas fa-tag"></i> Pricing</a>
+                <a href="index.html#testimonials"><i class="fas fa-quote-left"></i> Testimonials</a>
+                <a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="influencer-profile">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <h1 id="influencerName">Loading...</h1>
+                    <div class="handle" id="influencerHandle"></div>
+                    <div class="location-category">
+                        <span><i class="fas fa-map-marker-alt"></i> <span id="influencerLocation">Loading...</span></span>
+                        <span><i class="fas fa-tag"></i> <span id="influencerCategory">Loading...</span></span>
+                    </div>
+                    <div class="platform-badge" id="platformBadge">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <div class="value" id="followerCount">--</div>
+                        <div class="label">Followers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="value" id="engagementRate">--</div>
+                        <div class="label">Engagement</div>
+                    </div>
+                    <div class="stat">
+                        <div class="value" id="avgRate">--</div>
+                        <div class="label">Avg. Rate/Post</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-about">
+                    <h3>About This Influencer</h3>
+                    <p id="influencerBio">Loading bio information...</p>
+                    
+                    <div class="profile-links">
+                        <a href="#" id="profileLink" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i> View Profile
+                        </a>
+                        <a href="#" id="mediaKitBtn" class="btn-secondary">
+                            <i class="fas fa-file-download"></i> Download Media Kit
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="profile-highlights">
+                    <h3>Campaign Highlights</h3>
+                    <div class="highlight-grid">
+                        <div class="highlight-card">
+                            <i class="fas fa-rupee-sign"></i>
+                            <div class="highlight-content">
+                                <div class="highlight-value" id="postRate">₹15,000 - ₹25,000</div>
+                                <div class="highlight-label">Per Post</div>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-rupee-sign"></i>
+                            <div class="highlight-content">
+                                <div class="highlight-value" id="storyRate">₹8,000 - ₹12,000</div>
+                                <div class="highlight-label">Per Story</div>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-video"></i>
+                            <div class="highlight-content">
+                                <div class="highlight-value" id="videoRate">₹30,000 - ₹50,000</div>
+                                <div class="highlight-label">Per Video</div>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div class="highlight-content">
+                                <div class="highlight-value" id="responseTime">12-24 hours</div>
+                                <div class="highlight-label">Avg. Response Time</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-section">
+                <div class="booking-form">
+                    <h2>Book This Influencer</h2>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="campaignType">Campaign Type</label>
+                            <select id="campaignType" required>
+                                <option value="">Select campaign type</option>
+                                <option value="post">Instagram Post</option>
+                                <option value="story">Instagram Story</option>
+                                <option value="reel">Instagram Reel</option>
+                                <option value="video">Dedicated Video</option>
+                                <option value="longterm">Long-term Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget (₹)</label>
+                            <input type="number" id="budget" min="5000" placeholder="Enter your budget in INR" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Timeline</label>
+                            <select id="timeline" required>
+                                <option value="">Select timeline</option>
+                                <option value="1week">Within 1 week</option>
+                                <option value="2week">1-2 weeks</option>
+                                <option value="month">Within 1 month</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="campaignDetails">Campaign Details</label>
+                            <textarea id="campaignDetails" placeholder="Describe your campaign requirements"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Submit Booking Request
+                        </button>
+                    </form>
+                </div>
+                <div class="influencer-details">
+                    <div class="detail-card">
+                        <h3>Audience Demographics</h3>
+                        <div class="demographics-grid" id="demographicsGrid">
+                            <div class="loading-spinner">
+                                <div class="spinner"></div>
+                                <p>Loading demographics...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Top Locations</h3>
+                        <ul class="location-list" id="locationList">
+                            <li>Loading locations...</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Recent Collaborations</h3>
+                        <div class="brands-grid" id="brandsGrid">
+                            <div class="brand-card">
+                                <img src="assets/brands/myntra.png" alt="Myntra">
+                            </div>
+                            <div class="brand-card">
+                                <img src="assets/brands/boat.png" alt="boAt">
+                            </div>
+                            <div class="brand-card">
+                                <img src="assets/brands/mamaearth.png" alt="Mamaearth">
+                            </div>
+                            <div class="brand-card">
+                                <img src="assets/brands/swiggy.png" alt="Swiggy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/logos/adventure-logo-white.png" alt="AdVenture Logo" class="footer-logo">
+                    <p>India's most trusted influencer marketing platform since 2020</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#featured">Influencers</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#testimonials">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Influencer Agreement</a></li>
+                        <li><a href="#">Brand Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AdVenture Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js" type="module"></script>
+    <script src="js/influencer.js" type="module"></script>
+</body>
+</html>

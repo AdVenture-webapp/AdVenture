@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | AdVenture</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Auth Bar -->
+    <div class="auth-bar">
+        <div class="container">
+            <div class="auth-links">
+                <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="register-btn"><i class="fas fa-user-plus"></i> Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/adventure-logo.png" alt="AdVenture Logo" class="logo-img">
+                <span>AdVenture</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="index.html#featured"><i class="fas fa-star"></i> Featured</a>
+                <a href="pricing.html" class="active"><i class="fas fa-tag"></i> Pricing</a>
+                <a href="index.html#testimonials"><i class="fas fa-quote-left"></i> Testimonials</a>
+                <a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero -->
+    <section class="pricing-hero">
+        <div class="container">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>Choose the plan that works best for your influencer marketing needs</p>
+            <div class="pricing-toggle">
+                <span>Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Annual (Save 20%)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing-plans">
+        <div class="container">
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Starter</h3>
+                        <p>For small businesses & startups</p>
+                        <div class="plan-price">
+                            <span class="price">₹9,999</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="annual-price">₹7,999/month billed annually</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Access to 1,000+ influencers</li>
+                            <li><i class="fas fa-check"></i> 5 campaign credits/month</li>
+                            <li><i class="fas fa-check"></i> Basic analytics dashboard</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li><i class="fas fa-check"></i> Up to 3 team members</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="register.html" class="btn-secondary">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="plan-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Professional</h3>
+                        <p>For growing brands & agencies</p>
+                        <div class="plan-price">
+                            <span class="price">₹24,999</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="annual-price">₹19,999/month billed annually</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Access to 5,000+ influencers</li>
+                            <li><i class="fas fa-check"></i> 20 campaign credits/month</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics & reporting</li>
+                            <li><i class="fas fa-check"></i> Priority email & chat support</li>
+                            <li><i class="fas fa-check"></i> Up to 10 team members</li>
+                            <li><i class="fas fa-check"></i> Campaign strategy sessions</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="register.html" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Enterprise</h3>
+                        <p>For large brands & agencies</p>
+                        <div class="plan-price">
+                            <span class="price">₹49,999</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="annual-price">₹39,999/month billed annually</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Full influencer database access</li>
+                            <li><i class="fas fa-check"></i> Unlimited campaign credits</li>
+                            <li><i class="fas fa-check"></i> Premium analytics & API access</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> Unlimited team members</li>
+                            <li><i class="fas fa-check"></i> Custom contracts & invoicing</li>
+                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="#contact" class="btn-secondary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing FAQ -->
+    <section class="pricing-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is a campaign credit?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A campaign credit represents one influencer collaboration. For example, if you run a campaign with 5 influencers, it will consume 5 credits from your monthly allowance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I upgrade or downgrade my plan?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can change your plan at any time. When upgrading, you'll get prorated credit for your current plan. Downgrades take effect at your next billing cycle.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer custom plans?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer custom plans for agencies and brands with specific needs. Contact our sales team to discuss your requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit/debit cards, UPI, net banking, and NEFT/RTGS transfers. All prices are in INR and exclude GST.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing CTA -->
+    <section class="pricing-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Influencer Campaigns?</h2>
+                <p>Join 1000+ Indian brands already using AdVenture</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn-primary">Get Started for Free</a>
+                    <a href="#contact" class="btn-secondary">Talk to an Expert</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/logos/adventure-logo-white.png" alt="AdVenture Logo" class="footer-logo">
+                    <p>India's most trusted influencer marketing platform since 2020</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#featured">Influencers</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#testimonials">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Influencer Agreement</a></li>
+                        <li><a href="#">Brand Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AdVenture Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
