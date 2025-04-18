@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | AdVenture</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <a href="index.html" class="logo">
+          <i class="fas fa-mountain"></i> AdVenture
+        </a>
+        <h1>Create Account</h1>
+        <p>Join our influencer marketing platform</p>
+      </div>
+
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <div class="input-with-icon">
+            <i class="fas fa-user"></i>
+            <input type="text" id="fullName" name="fullName" placeholder="Ravi Kumar" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-with-icon">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="••••••••" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required />
+          </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" id="terms" name="terms" required />
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary">Create Account</button>
+
+        <div class="auth-footer">
+          <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+      </form>
+
+      <div class="social-login">
+        <p>Or register with</p>
+        <div class="social-buttons">
+          <button type="button" class="btn-social google">
+            <i class="fab fa-google"></i> Google
+          </button>
+          <button type="button" class="btn-social facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-image">
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

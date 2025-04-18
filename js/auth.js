@@ -135,3 +135,88 @@ function updatePasswordStrength(strength) {
     passwordStrengthLabel.textContent = labels[strength - 1];
     passwordStrengthLabel.style.color = colors[strength - 1];
 }
+// Auth Form Validation and Submission
+document.addEventListener('DOMContentLoaded', function() {
+    // Login Form
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Basic validation
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // In a real app, you would send this to your backend
+            console.log('Login attempt with:', { email, password });
+            
+            // Simulate successful login
+            setTimeout(() => {
+                alert('Login successful! Redirecting to dashboard...');
+                window.location.href = 'index.html';
+            }, 1000);
+        });
+    }
+    
+    // Register Form
+    const registerForm = document.getElementById('registerForm');
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const termsChecked = document.getElementById('terms').checked;
+            
+            // Validation
+            if (!fullName || !email || !password || !confirmPassword) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            
+            if (!termsChecked) {
+                alert('You must agree to the terms and conditions');
+                return;
+            }
+            
+            // In a real app, you would send this to your backend
+            console.log('Registration attempt with:', { fullName, email, password });
+            
+            // Simulate successful registration
+            setTimeout(() => {
+                alert('Registration successful! Redirecting to login...');
+                window.location.href = 'login.html';
+            }, 1000);
+        });
+    }
+    
+    // Social Login Buttons
+    document.querySelectorAll('.btn-social').forEach(button => {
+        button.addEventListener('click', function() {
+            const platform = this.classList.contains('google') ? 'Google' : 'Facebook';
+            alert(`Redirecting to ${platform} login...`);
+            // In a real app, you would implement OAuth flow here
+        });
+    });
+    
+    // Forgot Password Link
+    const forgotPassword = document.querySelector('.forgot-password');
+    if (forgotPassword) {
+        forgotPassword.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Password reset functionality would be implemented here');
+        });
+    }
+});

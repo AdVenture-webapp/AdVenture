@@ -272,7 +272,7 @@ img {
 .search-box input:focus {
     outline: none;
     background: white;
-    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+    box-shadow: 0 0 0 3px rgba(17, 57, 236, 0.908);
 }
 
 .search-box button {
@@ -315,7 +315,7 @@ img {
 
 .search-filters select:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+    box-shadow: 0 0 0 3px rgba(24, 61, 227, 0.834);
 }
 
 /* Platform Stats */
@@ -1663,4 +1663,54 @@ input:checked + .slider:before {
     .auth-card {
         padding: 30px 20px;
     }
+}
+/* ===== Legal Pages Specific Styling ===== */
+.legal-page {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.legal-page h1 {
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.legal-page h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.legal-page p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.legal-page ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.legal-page ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.legal-page a {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.legal-page a:hover {
+    color: #0056b3;
 }

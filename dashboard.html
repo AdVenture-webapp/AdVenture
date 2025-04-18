@@ -3,254 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure Dashboard</title>
+    <title>AdVenture | India's Premier Influencer Marketing Platform</title>
+    <meta name="description" content="Connect with top Indian influencers across YouTube, Instagram and TikTok for your brand campaigns">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Adventure-specific styles */
-        :root {
-            --adventure-primary: #5C4B37;
-            --adventure-secondary: #8B4513;
-            --adventure-accent: #D4A76A;
-        }
-        
-        body {
-            background: url('https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Cinzel', serif;
-        }
-        
-        .dashboard-container {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            border: 2px solid var(--adventure-accent);
-            border-radius: 15px;
-            color: white;
-            text-shadow: 1px 1px 3px black;
-        }
-        
-        .hero-header {
-            position: relative;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--adventure-accent);
-        }
-        
-        .hero-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid var(--adventure-accent);
-            object-fit: cover;
-            background: #5C4B37;
-        }
-        
-        .quest-card {
-            background: linear-gradient(135deg, rgba(92, 75, 55, 0.8) 0%, rgba(43, 34, 24, 0.9) 100%);
-            border-left: 5px solid var(--adventure-accent);
-            transition: transform 0.3s;
-        }
-        
-        .quest-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .progress-bar {
-            height: 10px;
-            background: #3E2D21;
-            border-radius: 5px;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #D4A76A, #F1C27D);
-            border-radius: 5px;
-            width: 45%;
-        }
-        
-        .inventory-item {
-            background: rgba(139, 69, 19, 0.3);
-            border: 1px solid var(--adventure-accent);
-        }
-        
-        .logout-btn {
-            background: linear-gradient(135deg, #8B4513, #A0522D);
-            letter-spacing: 1px;
-        }
-        
-        .logout-btn:hover {
-            background: linear-gradient(135deg, #A0522D, #8B4513);
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container dashboard-container">
-        <!-- Hero Profile Section -->
-        <div class="hero-header text-center mb-5">
-            <img src="https://i.imgur.com/JQWpgIm.png" alt="Hero Avatar" class="hero-avatar mb-3">
-            <h1 id="hero-name">Adventurer</h1>
-            <p class="text-muted">Level <span id="hero-level">5</span> Explorer</p>
-        </div>
-        
-        <div class="row">
-            <!-- Current Quest -->
-            <div class="col-md-6 mb-4">
-                <div class="quest-card p-4 rounded">
-                    <h3><i class="fas fa-scroll mr-2"></i> Current Quest</h3>
-                    <h4 id="quest-title">The Lost Temple of Zorath</h4>
-                    <p id="quest-desc">Retrieve the Sacred Gem from the ancient ruins before the next full moon.</p>
-                    
-                    <div class="mt-3">
-                        <p>Progress: <span id="quest-progress">45</span>%</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-bar-fill"></div>
-                        </div>
-                    </div>
-                    
-                    <button class="btn btn-block mt-3" style="background: var(--adventure-accent);">Continue Quest</button>
-                </div>
-            </div>
-            
-            <!-- Inventory -->
-            <div class="col-md-6 mb-4">
-                <h3><i class="fas fa-backpack mr-2"></i> Inventory</h3>
-                <div class="row">
-                    <div class="col-4 mb-3">
-                        <div class="inventory-item p-2 rounded text-center">
-                            <i class="fas fa-gem fa-2x mb-2" style="color: #D4A76A;"></i>
-                            <p>Sacred Gem</p>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <div class="inventory-item p-2 rounded text-center">
-                            <i class="fas fa-key fa-2x mb-2" style="color: silver;"></i>
-                            <p>Ancient Key</p>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <div class="inventory-item p-2 rounded text-center">
-                            <i class="fas fa-hat-wizard fa-2x mb-2" style="color: #6A5ACD;"></i>
-                            <p>Mage's Hat</p>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <div class="inventory-item p-2 rounded text-center">
-                            <i class="fas fa-flask fa-2x mb-2" style="color: #32CD32;"></i>
-                            <p>Healing Potion</p>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <div class="inventory-item p-2 rounded text-center">
-                            <i class="fas fa-book fa-2x mb-2" style="color: #8B0000;"></i>
-                            <p>Spellbook</p>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <div class="inventory-item p-2 rounded text-center">
-                            <i class="fas fa-plus-circle fa-2x mb-2" style="color: #D4A76A;"></i>
-                            <p>More...</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Top Auth Bar --> 
+    <div class="auth-bar">
+        <div class="container">
+            <div class="auth-links">
+                <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="register-btn"><i class="fas fa-user-plus"></i> Register</a>
             </div>
         </div>
-        
-        <!-- Stats -->
-        <div class="row mb-4">
-            <div class="col-md-3 col-6 text-center">
-                <h4>Health</h4>
-                <div class="circular-progress" data-value="75">
-                    <svg class="progress-ring" width="80" height="80">
-                        <circle class="progress-ring-circle" stroke="#FF0000" stroke-width="6" fill="transparent" r="35" cx="40" cy="40"/>
-                    </svg>
-                    <span class="progress-text">75%</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-6 text-center">
-                <h4>Mana</h4>
-                <div class="circular-progress" data-value="40">
-                    <svg class="progress-ring" width="80" height="80">
-                        <circle class="progress-ring-circle" stroke="#1E90FF" stroke-width="6" fill="transparent" r="35" cx="40" cy="40"/>
-                    </svg>
-                    <span class="progress-text">40%</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-6 text-center">
-                <h4>Strength</h4>
-                <div class="circular-progress" data-value="85">
-                    <svg class="progress-ring" width="80" height="80">
-                        <circle class="progress-ring-circle" stroke="#FF8C00" stroke-width="6" fill="transparent" r="35" cx="40" cy="40"/>
-                    </svg>
-                    <span class="progress-text">85%</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-6 text-center">
-                <h4>Agility</h4>
-                <div class="circular-progress" data-value="60">
-                    <svg class="progress-ring" width="80" height="80">
-                        <circle class="progress-ring-circle" stroke="#32CD32" stroke-width="6" fill="transparent" r="35" cx="40" cy="40"/>
-                    </svg>
-                    <span class="progress-text">60%</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Map -->
-        <div class="mb-4">
-            <h3><i class="fas fa-map-marked-alt mr-2"></i> World Map</h3>
-            <div style="background: url('https://i.imgur.com/7QF4WfG.png') no-repeat center center; background-size: cover; height: 200px; border: 3px solid var(--adventure-accent); border-radius: 10px; position: relative;">
-                <div class="player-marker" style="position: absolute; top: 65%; left: 30%;">
-                    <i class="fas fa-map-marker-alt fa-2x" style="color: red;"></i>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Logout Button -->
-        <button class="btn logout-btn btn-block py-3 mt-4" id="logoutBtn">
-            <i class="fas fa-sign-out-alt mr-2"></i> Leave Adventure
-        </button>
     </div>
 
-    <!-- Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span>AdVenture</span> <!-- Text logo instead of an image -->
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#featured"><i class="fas fa-star"></i> Featured</a>
+                <a href="pricing.html"><i class="fas fa-tag"></i> Pricing</a>
+                <a href="#testimonials"><i class="fas fa-quote-left"></i> Testimonials</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Boost Your Brand with India's Top Influencers</h1>
+                <p>Access 5000+ verified influencers across Instagram, YouTube and TikTok with transparent pricing in INR</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search influencers (e.g. Fashion, Mumbai, 1M followers)" id="searchInput">
+                        <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                    <div class="search-filters">
+                        <select id="platformFilter">
+                            <option value="all">All Platforms</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="tiktok">TikTok</option>
+                        </select>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="beauty">Beauty</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="gaming">Gaming</option>
+                        </select>
+                        <select id="locationFilter">
+                            <option value="all">All India</option>
+                            <option value="delhi">Delhi NCR</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="hyderabad">Hyderabad</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Stats -->
+    <section class="platform-stats">
+        <div class="container">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fab fa-instagram"></i></div>
+                <div class="stat-value">260+</div>
+                <div class="stat-label">Instagram Influencers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fab fa-youtube"></i></div>
+                <div class="stat-value">100+</div>
+                <div class="stat-label">YouTube Creators</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fab fa-tiktok"></i></div>
+                <div class="stat-value">120+</div>
+                <div class="stat-label">TikTok Stars</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Influencers -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Indian Influencers This Month</h2>
+                <div class="sort-options">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="popular">Most Popular</option>
+                        <option value="engagement">Highest Engagement</option>
+                        <option value="followers">Most Followers</option>
+                        <option value="price">Price (Low to High)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="influencer-grid" id="influencerGrid">
+                <!-- Populated by JavaScript -->
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading influencers...</p>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button id="loadMoreBtn" class="btn-secondary">Load More Influencers</button>
+            </div>
+        </div>
+    </section>
     
-    <!-- Dashboard Script -->
-    <script>
-        // Check if user is logged in
-        if(!localStorage.getItem('mockAuth')) {
-            window.location.href = 'login.html';
-        }
-        
-        // Load user data
-        document.getElementById('hero-name').textContent = localStorage.getItem('mockUser') || 'Adventurer';
-        
-        // Animate progress bars
-        document.querySelectorAll('.circular-progress').forEach(el => {
-            const progress = el.getAttribute('data-value');
-            const circle = el.querySelector('.progress-ring-circle');
-            const radius = circle.r.baseVal.value;
-            const circumference = 2 * Math.PI * radius;
-            
-            circle.style.strokeDasharray = `${circumference}`;
-            circle.style.strokeDashoffset = `${circumference - (progress / 100 * circumference)}`;
-        });
-        
-        // Logout function
-        document.getElementById('logoutBtn').addEventListener('click', () => {
-            localStorage.removeItem('mockAuth');
-            window.location.href = 'login.html';
-        });
-        
-        // Update quest progress animation
-        let progress = 0;
-        const questProgress = setInterval(() => {
-            progress += 1;
-            document.getElementById('quest-progress').textContent = progress;
-            document.getElementById('progress-bar-fill').style.width = `${progress}%`;
-            
-            if(progress >= 45) {
-                clearInterval(questProgress);
-            }
-        }, 50);
-    </script>
+    <!-- Pricing CTA -->
+    <section class="pricing-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Transparent Pricing in INR</h2>
+                <p>See exactly how much campaigns cost with our influencer rate cards</p>
+                <a href="pricing.html" class="btn-primary">View Pricing Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2>Trusted by 500+ Indian Brands</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"AdVenture helped us connect with perfect micro-influencers in Mumbai. Our campaign ROI increased by 300%!"</p>
+                    <div class="client-info">                        <div>
+                            <div class="name">Priya Sharma</div>
+                            <div class="title">Marketing Head, DesiDukaan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"The platform saved us weeks of influencer research. We found 20 perfect matches for our skincare brand."</p>
+                    <div class="client-info">
+                        <div>
+                            <div class="name">Rahul Kapoor</div>
+                            <div class="title">Founder, GlowHerb</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Ready to Start Your Campaign?</h2>
+                    <p>Our influencer specialists are available to help you plan your strategy</p>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>enquiry@adventure.in</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Patna | Delhi | Bangalore</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your campaign"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Get Expert Advice</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <span>AdVenture</span> <!-- Updated footer logo to text -->
+                    <p>India's most trusted influencer marketing platform since 2020</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#featured">Influencers</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Influencer Agreement</a></li>
+                        <li><a href="#">Brand Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AdVenture Technologies Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>
